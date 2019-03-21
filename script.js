@@ -2,19 +2,20 @@
 $(document).ready(function(){
 	var bool = false;
 
-
+	/* animation Icon Menu */
 	$('.menu').on('click', function() {
 		if(bool == false){
+            $('.menu').addClass('open');
             $('#cssmenu:hidden').show(3000);
             bool = true;
 		}else{
-			console.log("a");
+            $('.menu').removeClass('open');
             $('#cssmenu').hide(3000);
 			bool = false;
 		}
-
 	});
 
+	/* animation Menu Start */
 	$('#cssmenu li.active').addClass('open').children('ul').show();
 		$('#cssmenu li.has-sub>a').on('click', function(){
 			$(this).removeAttr('href');
